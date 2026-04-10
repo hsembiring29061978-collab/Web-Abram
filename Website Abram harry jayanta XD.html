@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarryLOg Ultimate Computing | Engineered by Abram Harr7</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #cbd5e1; }
+        .glass-nav { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(59, 130, 246, 0.1); }
+        .neon-border { border: 1px solid rgba(59, 130, 246, 0.2); transition: all 0.3s ease; }
+        .neon-border:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        .product-image-container img { transition: transform 0.5s ease; }
+        .product-card:hover .product-image-container img { transform: scale(1.1) rotate(1deg); }
+        .stat-value { background: linear-gradient(90deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+        @keyframes pulse-blue { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .pulse-stok { animation: pulse-blue 2s infinite; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-[100] glass-nav transition-all duration-300" id="main-nav">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white font-black px-3 py-1 rounded-bl-xl text-xl shadow-[0_0_15px_rgba(37,99,235,0.5)]">H7</div>
+                <div class="text-2xl font-black tracking-tighter text-white uppercase">Harry<span class="text-blue-500">LOg</span></div>
+            </div>
+            
+            <div class="hidden lg:flex space-x-10 text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="#hero" class="hover:text-blue-400 transition">Evolution</a>
+                <a href="#shop" class="hover:text-blue-400 transition">Inventory</a>
+                <a href="#build-log" class="hover:text-blue-400 transition">Build-Log</a>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <button onclick="toggleCart()" class="relative group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white group-hover:text-blue-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-blue-600 text-white text-[9px] w-5 h-5 flex items-center justify-center rounded-full font-bold border-2 border-[#020617]">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.08)_0%,_transparent_70%)]"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center space-x-3 bg-slate-900 border border-slate-800 px-5 py-2 rounded-full mb-8 neon-border">
+                <span class="relative flex h-3 w-3">
+                    <span class="pulse-stok absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+                </span>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Lab Validated by <span class="text-white font-black">Abram Harr7</span></span>
+            </div>
+            <h1 class="text-6xl md:text-9xl font-extrabold mb-8 tracking-tighter text-white leading-none">THE LOGIC OF <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">POWER.</span></h1>
+            <p class="max-w-2xl mx-auto text-slate-400 text-xl font-light mb-12LEADING-RELAXED">Platform komputasi masa depan. Setiap unit adalah karya presisi, dikalibrasi untuk performa ekstrem tanpa kompromi.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#shop" class="bg-blue-600 hover:bg-blue-500 text-white px-12 py-5 rounded-full font-bold transition-all shadow-lg shadow-blue-600/20 uppercase text-xs tracking-widest">Eksplorasi Inventory</a>
+                <a href="#" class="border border-slate-800 hover:bg-slate-800 px-12 py-5 rounded-full font-bold transition-all text-white uppercase text-xs tracking-widest">Custom Configurator</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="shop" class="py-32 bg-[#020617] border-t border-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 border-b border-slate-900 pb-10">
+                <div>
+                    <h2 class="text-4xl font-black text-white italic tracking-tighter">H7 INVENTORY</h2>
+                    <p class="text-slate-500 mt-2 font-light">Selected engines for extreme workloads.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 bg-slate-900 p-2 rounded-xl border border-slate-800">
+                    <button onclick="filterProducts('all')" class="filter-btn active px-5 py-2.5 bg-blue-600 text-[10px] font-bold rounded-lg text-white uppercase tracking-widest transition">All</button>
+                    <button onclick="filterProducts('laptop')" class="filter-btn px-5 py-2.5 hover:bg-slate-800 text-[10px] font-bold rounded-lg text-slate-400 uppercase tracking-widest transition">Laptops</button>
+                    <button onclick="filterProducts('pc')" class="filter-btn px-5 py-2.5 hover:bg-slate-800 text-[10px] font-bold rounded-lg text-slate-400 uppercase tracking-widest transition">PC Builds</button>
+                    <button onclick="filterProducts('component')" class="filter-btn px-5 py-2.5 hover:bg-slate-800 text-[10px] font-bold rounded-lg text-slate-400 uppercase tracking-widest transition">Components</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="product-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="build-log" class="py-32 bg-slate-950 border-t border-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-white italic tracking-tighter mb-4 uppercase">HarryLog Build Process</h2>
+                <p class="text-slate-500 max-w-lg mx-auto font-light">Transparansi penuh dari Lab Harry7. Lihat bagaimana mesin Anda dilahirkan.</p>
+            </div>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-1/2 -translate-x-1/2 h-full w-[1px] bg-slate-800 z-0"></div>
+                
+                <div class="relative z-10 grid grid-cols-2 gap-10 mb-16 items-center">
+                    <div class="text-right">
+                        <h4 class="text-lg font-bold text-white uppercase">Komponen Validasi</h4>
+                        <p class="text-sm text-slate-500 mt-1">Setiap part diperiksa fisiknya oleh teknisi senior.</p>
+                    </div>
+                    <div class="flex justify-start items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/30">1</div>
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Lolos Cek Fisik</span>
+                    </div>
+                </div>
+
+                <div class="relative z-10 grid grid-cols-2 gap-10 mb-16 items-center">
+                    <div class="flex justify-end items-center space-x-4 order-2 md:order-1">
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Perakitan Presisi</span>
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/30">2</div>
+                    </div>
+                    <div class="text-left order-1 md:order-2">
+                        <h4 class="text-lg font-bold text-white uppercase">Precision Assembly</h4>
+                        <p class="text-sm text-slate-500 mt-1">Manajemen kabel tingkat dewa untuk airflow maksimal.</p>
+                    </div>
+                </div>
+
+                <div class="relative z-10 grid grid-cols-2 gap-10 items-center">
+                    <div class="text-right">
+                        <h4 class="text-lg font-bold text-white uppercase">Stress Test 48H</h4>
+                        <p class="text-sm text-slate-500 mt-1">Uji beban penuh CPU/GPU nonstop untuk stabilitas.</p>
+                    </div>
+                    <div class="flex justify-start items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/30">3</div>
+                        <span class="text-xs text-blue-400 font-bold uppercase tracking-widest">Validasi Abram Harr7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cart-panel" class="fixed top-0 right-0 h-full w-full md:w-[450px] bg-[#020617] z-[200] border-l border-slate-800 translate-x-full transition-transform duration-500 flex flex-col shadow-2xl">
+        <div class="p-8 border-b border-slate-800 flex justify-between items-center bg-slate-950">
+            <h2 class="text-2xl font-black text-white italic tracking-tighter">THE BAG</h2>
+            <button onclick="toggleCart()" class="text-3xl text-slate-600 hover:text-white">&times;</button>
+        </div>
+        <div id="cart-items" class="flex-grow p-8 overflow-y-auto space-y-6 scrollbar-thin">
+            </div>
+        <div class="p-8 bg-slate-950 border-t border-slate-800">
+            <div class="flex justify-between text-2xl font-black mb-10">
+                <span class="text-slate-500 uppercase text-xs tracking-[0.3em]">Total Log</span>
+                <span id="cart-total" class="text-white">Rp 0</span>
+            </div>
+            <button onclick="checkoutWhatsApp()" class="w-full bg-blue-600 py-6 rounded-xl font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">Checkout via WhatsApp</button>
+        </div>
+    </div>
+
+    <footer class="py-20 bg-black border-t border-slate-900">
+        <div class="container mx-auto px-6 text-center footer-content">
+            <div class="flex items-center justify-center space-x-2 mb-10">
+                <div class="bg-blue-600 text-white font-black px-3 py-1 rounded-br-xl text-xl italic shadow-[0_0_15px_rgba(37,99,235,0.4)]">H7</div>
+                <div class="text-2xl font-black tracking-tighter text-white uppercase">Harry<span class="text-blue-500">LOg</span></div>
+            </div>
+            <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4">Developed & Engineered by Abram Harr7</p>
+            <p class="text-slate-800 text-[9px] mb-10 max-w-md mx-autoLEADING-RELAXED">© 2026 HARRYLOG COMPUTING LTD. ALL RIGHTS RESERVED. Semua spesifikasi divalidasi oleh Lab Harry7 sebelum publikasi.</p>
+            <div class="flex justify-center space-x-12 text-slate-700 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-blue-500 transition">INSTAGRAM</a>
+                <a href="#" class="hover:text-blue-500 transition">TWITTER</a>
+                <a href="#" class="hover:text-blue-500 transition">YOUTUBE</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            { id: 1, type: 'laptop', name: "X-LOG 17 PRO", price: 55000000, img: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600", stock: 'High Stock', cpu: 95, gpu: 98 },
+            { id: 2, type: 'pc', name: "H7 OVERLORD PC", price: 89000000, img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600", stock: 'Low Stock', cpu: 99, gpu: 99 },
+            { id: 3, type: 'component', name: "RTX 5090 LOG OC", price: 38500000, img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600", stock: 'Pre-Order', cpu: 0, gpu: 100 },
+            { id: 4, type: 'component', name: "NVME GEN5 4TB", price: 9200000, img: "https://images.unsplash.com/photo-1563330232-57114bb0823c?w=600", stock: 'High Stock', cpu: 0, gpu: 0 },
+            { id: 5, type: 'laptop', name: "SLIM-LOG 14", price: 28900000, img: "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600", stock: 'High Stock', cpu: 85, gpu: 70 },
+            { id: 6, type: 'component', name: "H7 AIO 360 LCD", price: 4100000, img: "https://images.unsplash.com/photo-1591405351990-4726e331f14c?w=600", stock: 'High Stock', cpu: 10, gpu: 0 },
+            { id: 7, type: 'pc', name: "CREATOR PC V3", price: 62000000, img: "https://images.unsplash.com/photo-1593640495253-23196b27a87f?w=600", stock: 'Low Stock', cpu: 95, gpu: 90 },
+            { id: 8, type: 'component', name: "Z790 Harry7 Edition", price: 7800000, img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600", stock: 'High Stock', cpu: 0, gpu: 0 }
+        ];
+
+        let cart = [];
+        const grid = document.getElementById('product-grid');
+
+        // Initial render
+        renderProducts(products);
+
+        function renderProducts(productsToRender) {
+            grid.innerHTML = '';
+            if (productsToRender.length === 0) {
+                grid.innerHTML = '<p class="text-slate-600 col-span-4 text-center py-20 italic">Tidak ada produk dalam kategori ini.</p>';
+                return;
+            }
+            productsToRender.forEach(p => {
+                const pcStats = p.type === 'pc' || p.type === 'laptop' ? `
+                    <div class="flex justify-between items-center text-[9px] text-slate-600 mt-4 border-t border-slate-800 pt-3">
+                        <span>CPU PERF: <span class="font-bold text-white">${p.cpu}%</span></span>
+                        <span>GPU PERF: <span class="font-bold text-white">${p.gpu}%</span></span>
+                    </div>
+                ` : '';
+
+                const arButton = p.type === 'pc' || p.type === 'laptop' ? `
+                    <button class="absolute top-4 left-4 z-20 bg-slate-900 border border-slate-800 text-white p-2 rounded-lg text-xs hover:bg-blue-600 transition" title="Lihat AR di Mejamu">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h.01M16 12h.01M8 12h.01M12 16h.01M16 16h.01M8 16h.01M10 16h4"></path></svg>
+                    </button>
+                ` : '';
+
+                grid.innerHTML += `
+                    <div class="product-card group relative bg-slate-900 rounded-3xl p-6 neon-border transition-all duration-500 overflow-hidden ${p.type}">
+                        ${arButton}
+                        <div class="absolute top-4 right-4 z-20 flex items-center space-x-2">
+                            <span class="pulse-stok text-[8px] font-black px-2 py-1 rounded bg-blue-600/20 text-blue-400 uppercase tracking-widest border border-blue-600/30">${p.stock}</span>
+                        </div>
+                        <div class="product-image-container h-48 overflow-hidden rounded-2xl mb-6 relative">
+                            <img src="${p.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                        </div>
+                        <h3 class="text-lg font-black text-white mb-1 uppercase tracking-tighter truncate">${p.name}</h3>
+                        <p class="text-blue-500 text-xs font-bold mb-3 uppercase tracking-widest">${p.type}</p>
+                        <div class="flex items-center justify-between mt-auto border-t border-slate-800 pt-5">
+                            <div class="text-2xl font-light text-white leading-none">Rp <span class="font-black">${(p.price / 1000000).toFixed(1)}M</span></div>
+                            <button onclick="addToCart('${p.name}', ${p.price})" class="w-12 h-12 bg-white text-black flex items-center justify-center rounded-full hover:bg-blue-500 hover:text-white transition-all transform group-hover:scale-110 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                        ${pcStats}
+                    </div>
+                `;
+            });
+        }
+
+        // --- FILTER LOGIC ---
+        function filterProducts(category) {
+            // Update buttons state
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('text-slate-400', 'hover:bg-slate-800');
+            });
+            event.currentTarget.classList.remove('text-slate-400', 'hover:bg-slate-800');
+            event.currentTarget.classList.add('bg-blue-600', 'text-white');
+
+            if (category === 'all') {
+                renderProducts(products);
+            } else {
+                const filtered = products.filter(p => p.type === category);
+                renderProducts(filtered);
+            }
+        }
+
+        // --- CART LOGIC ---
+        const cartPanel = document.getElementById('cart-panel');
+        const cartCount = document.getElementById('cart-count');
+        const cartItemsDiv = document.getElementById('cart-items');
+        const cartTotalSpan = document.getElementById('cart-total');
+
+        function toggleCart() {
+            cartPanel.classList.toggle('translate-x-full');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+            // Notifikasi pulse
+            cartCount.classList.add('scale-150', 'bg-red-500');
+            setTimeout(() => cartCount.classList.remove('scale-150', 'bg-red-500'), 300);
+            
+            // Otomatis buka keranjang jika pertama kali tambah
+            if(cart.length === 1) toggleCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            cartCount.innerText = cart.length;
+            
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p class="text-slate-600 italic text-center text-sm py-10">Your Bag is empty.</p>';
+                cartTotalSpan.innerText = "Rp 0";
+                return;
+            }
+
+            let total = 0;
+            cartItemsDiv.innerHTML = '';
+            cart.forEach((item, index) => {
+                total += item.price;
+                cartItemsDiv.innerHTML += `
+                    <div class="flex justify-between items-center group bg-slate-900 p-4 rounded-xl border border-slate-800">
+                        <div>
+                            <p class="text-white font-bold text-sm uppercase tracking-tight leading-tight">${item.name}</p>
+                            <p class="text-blue-500 font-bold text-xs mt-1">Rp ${item.price.toLocaleString('id-ID')}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-slate-700 hover:text-red-500 transition font-bold text-2xl">&times;</button>
+                    </div>
+                `;
+            });
+            cartTotalSpan.innerText = "Rp " + total.toLocaleString('id-ID');
+        }
+
+        // --- WA CHECKOUT ---
+        function checkoutWhatsApp() {
+            if(cart.length === 0) return alert('Keranjang kosong!');
+            
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            let message = `Halo HarryLog, saya ingin memesan dari Abram Harr7 Inventory:\n\n`;
+            
+            cart.forEach((item, index) => {
+                message += `${index + 1}. ${item.name} - Rp ${item.price.toLocaleString('id-ID')}\n`;
+            });
+            
+            message += `\nTotal Harga: *Rp ${total.toLocaleString('id-ID')}*`;
+            
+            const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+        
+        // --- NAV SCROLL EFFECT ---
+        window.onscroll = function() {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-2xl');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-2xl');
+            }
+        };
+    </script>
+</body>
+</html>
